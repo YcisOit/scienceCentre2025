@@ -12,7 +12,7 @@ export default function AboutUs() {
       <Header />
 
       {/* Hero Section */}
-      <div className="relative w-full h-40 md:h-56">
+      <div className="relative w-full h-40 md:h-50">
         <Image
           src="/images/3696093.jpg"
           alt="About Us Background"

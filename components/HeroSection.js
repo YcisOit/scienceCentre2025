@@ -39,7 +39,7 @@ export default function HeroSection() {
           <Image
             src={sliderImages[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
-            width={1920}
+            width={1930}
             height={900}
             className="w-full h-[650px] object-cover transition-all duration-500"
           />

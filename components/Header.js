@@ -31,7 +31,7 @@ export default function Header() {
       title: "About Us",
       submenus: [
         { name: "About RSIAC", link: "/about" },
-        { name: "Vision & Mission", link: "/about/vision-mission" },
+        { name: "Vision & Mission", link: "/vissionmission" },
         { name: "Team", link: "/about/team" },
       ],
     },

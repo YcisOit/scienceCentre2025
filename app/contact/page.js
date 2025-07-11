@@ -19,7 +19,7 @@ export default function ContactUsPage() {
       {/* Hero Section */}
       <section className="relative w-full h-48 md:h-60">
         <Image
-          src="/images/contact.jpg"
+          src="/images/7.jpg"
           alt="Contact Banner"
           layout="fill"
           objectFit="cover"
@@ -43,7 +43,7 @@ export default function ContactUsPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* Left: Inquiry Form */}
           <div className="bg-gray-50 rounded-2xl p-8 shadow-md">
-            <h2 className="text-2xl font-semibold text-teal-800 mb-6">Inquiry Form</h2>
+            <h2 className="text-2xl font-semibold text-black mb-6">Inquiry Form</h2>
             <form className="space-y-5">
               <div>
                 <label className="block text-sm font-medium text-gray-700">Full Name</label>
@@ -83,7 +83,7 @@ export default function ContactUsPage() {
 
               <button
                 type="submit"
-                className="bg-teal-700 hover:bg-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition duration-300"
+                className="bg-blue-950 hover:bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition duration-300"
               >
                 Submit Inquiry
               </button>
@@ -92,10 +92,10 @@ export default function ContactUsPage() {
 
           {/* Right: Contact Details */}
           <div className="bg-gray-50 rounded-2xl p-8 shadow-md">
-            <h2 className="text-2xl font-semibold text-teal-800 mb-6">Reach Us</h2>
+            <h2 className="text-2xl font-semibold text-black mb-6">Reach Us</h2>
             <div className="space-y-6 text-gray-700 text-base">
               <div className="flex items-start space-x-4">
-                <MapPin className="text-teal-700 mt-1" size={24} />
+                <MapPin className="text-black mt-1" size={24} />
                 <div>
                   <p className="font-medium">Rayat Science and Innovation Activity Centre</p>
                   <p>Varye, Taluka- Satara, Maharashtra</p>
@@ -103,12 +103,12 @@ export default function ContactUsPage() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <Phone className="text-teal-700" size={22} />
+                <Phone className="text-black" size={22} />
                 <p>+91 8605145013</p>
               </div>
 
               <div className="flex items-center space-x-4">
-                <Mail className="text-teal-700" size={22} />
+                <Mail className="text-black" size={22} />
                 <p>rayatsciencecenter@gmail.com</p>
               </div>
             </div>

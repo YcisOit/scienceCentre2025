@@ -36,6 +36,16 @@ export default function Header() {
       ],
     },
     {
+      title: "Gallery",
+      submenus: [
+        { name: "Rolling Ball Sculpture", link: "/gallery1" },
+        { name: "Fun Science Gallery", link: "/gallery2" },
+        { name: "Virtual Tour", link: "/gallery/virtual-tour" },
+        { name: "Innovation Centre", link: "/gallery4" },
+        { name: "Science Park", link: "/gallery5" },
+      ],
+    },
+    {
       title: "Innovation Activity Laboratory",
       submenus: [
         { name: "Projects", link: "/innovation/projects" },
@@ -43,14 +53,7 @@ export default function Header() {
         { name: "Success Stories", link: "/innovation/success-stories" },
       ],
     },
-    {
-      title: "Gallery",
-      submenus: [
-        { name: "Photo Gallery", link: "/gallery/photo" },
-        { name: "Fun Science Gallery", link: "/gallery2" },
-        { name: "Virtual Tour", link: "/gallery/virtual-tour" },
-      ],
-    },
+    
     {
       title: "Education Activities",
       submenus: [
@@ -75,7 +78,7 @@ export default function Header() {
         { name: "Recruitment", link: "/notice/recruitment" },
       ],
     },
-    { title: "Contact", link: "/" },
+    { title: "Contact", link: "/contact" },
   ];
 
   return (
@@ -122,7 +125,7 @@ export default function Header() {
       </div>
 
       {/* 🌐 Navigation Bar */}
-      <nav className="bg-[#008069] text-white text-sm sm:text-base font-medium relative z-50">
+      <nav className="bg-[#000435] text-white text-sm sm:text-base font-medium relative z-50">
         <ul
           className={`flex-col sm:flex-row sm:flex ${
             mobileMenuOpen ? 'flex' : 'hidden'

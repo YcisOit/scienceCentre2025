@@ -40,7 +40,7 @@ export default function Header() {
       submenus: [
         { name: "Rolling Ball Sculpture", link: "/gallery1" },
         { name: "Fun Science Gallery", link: "/gallery2" },
-        { name: "Virtual Tour", link: "/gallery/virtual-tour" },
+        { name: "Exhibition Hall", link: "/gallery3" },
         { name: "Innovation Centre", link: "/gallery4" },
         { name: "Science Park", link: "/gallery5" },
       ],

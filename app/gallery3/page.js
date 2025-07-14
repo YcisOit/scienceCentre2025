@@ -9,8 +9,7 @@ import {
   BookOpen,
   Atom,
   GalleryHorizontalEnd,
-  Sparkles,
-  Award
+  Sparkles
 } from 'lucide-react';
 
 export default function FunSciencePage() {
@@ -22,27 +21,28 @@ export default function FunSciencePage() {
       {/* Hero Section */}
       <section className="relative w-full h-40 md:h-60">
         <Image
-          src="/images/9.jpg"
-          alt="Fun Science Banner"
-          fill
-          className="object-cover brightness-75"
+          src="/images/10.jpg"
+          alt="Exhibition Hall banner"
+          layout="fill"
+          objectFit="cover"
+          className="brightness-75"
         />
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-white text-4xl md:text-5xl font-bold drop-shadow-lg">
-            Fun Science Gallery
+            Exhibition Hall
           </h1>
           <div className="mt-3 flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full shadow-md text-white text-sm">
             <HomeIcon size={18} />
             <Link href="/" className="hover:underline">Home</Link>
             <span>/</span>
-            <span>Fun Science Gallery</span>
+            <span>Exhibition Hall</span>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-10">
-        <div className="bg-white border-2 border-black rounded-2xl shadow-xl p-6 md:p-10">
+        <div className="bg-white border-2 border-black rounded-2xl shadow-xl p-6 md:p-10 space-y-12">
 
           {/* Section Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-8 flex justify-center items-center gap-2">
@@ -50,7 +50,7 @@ export default function FunSciencePage() {
             Science Made Fun & Interactive
           </h2>
 
-          {/* Description */}
+          {/* Description Section */}
           <div className="text-lg leading-relaxed text-gray-700 text-justify space-y-5">
             <p className="flex gap-2 items-start">
               <Lightbulb className="text-orange-500 mt-1" />
@@ -73,10 +73,21 @@ export default function FunSciencePage() {
                 presented in a lucid and enjoyable manner. It transforms traditional textbook learning into an immersive, memorable experience.
               </span>
             </p>
+            <p>
+              The Nobel Prize is widely considered the world's most prestigious award. Every year, it is awarded to those who, during the preceding year, shall have conferred the greatest benefit on mankind. Prizes in Physics, Chemistry, Physiology or Medicine, Literature, and Peace have been awarded since 1901, and another prize in Economic Sciences was added in 1968.
+            </p>
+            <p>
+              The exhibition gives a brief about what the Nobel Prize is, its history, and covers the Nobel Prizes 2018 & 2019 in science subjects. It also includes information about the Indians who have been awarded these prestigious prizes.
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li><strong>Indian Nobel Laureates:</strong> Rabindranath Tagore (Literature, 1913); C.V. Raman (Physics, 1930); H.G. Khorana (Medicine, 1968); Mother Teresa (Peace, 1979); S. Chandrasekhar (Physics, 1983); Amartya Sen (Economics, 1998); V. Ramakrishnan (Chemistry, 2009); Kailash Satyarthi (Peace, 2014); Abhijit Banerjee (Economics, 2019)</li>
+              <li><strong>2018:</strong> Physics – Arthur Ashkin, Gérard Mourou & Donna Strickland; Chemistry – Frances Arnold, George Smith & Gregory Winter; Medicine – James Allison & Tasuku Honjo</li>
+              <li><strong>2019:</strong> Physics – James Peebles, Michel Mayor & Didier Queloz; Chemistry – John Goodenough, Stanley Whittingham & Akira Yoshino; Medicine – William Kaelin Jr, Peter Ratcliffe & Gregg Semenza.</li>
+            </ul>
           </div>
 
           {/* Gallery Section */}
-          <div className="mt-12">
+          <div>
             <h3 className="text-2xl md:text-3xl font-semibold text-center text-teal-700 mb-8 flex justify-center items-center gap-2">
               <GalleryHorizontalEnd className="text-teal-600" />
               Gallery Highlights
@@ -98,23 +109,6 @@ export default function FunSciencePage() {
               ))}
             </div>
           </div>
-
-          {/* Nobel Prize Exhibition Section */}
-          <div className="mt-16">
-            <h3 className="text-2xl md:text-3xl font-semibold text-center text-blue-700 mb-6 flex justify-center items-center gap-2">
-              <Award className="text-blue-600" />
-              Nobel Prize Exhibition Hall
-            </h3>
-            <p className="text-gray-700 text-justify text-lg">
-              The Nobel Prize is considered the world's most prestigious award, given annually to those who have conferred the greatest benefit on mankind. Since 1901, prizes in Physics, Chemistry, Medicine, Literature, and Peace have been awarded, with Economic Sciences added in 1968. This exhibition outlines the significance, history, and science Nobel Prizes of 2018 & 2019, and highlights Indian Nobel laureates.
-            </p>
-            <ul className="list-disc list-inside mt-4 text-gray-800 space-y-1">
-              <li><strong>Indian Nobel Laureates:</strong> Rabindranath Tagore (1913), C.V. Raman (1930), H.G. Khorana (1968), Mother Teresa (1979), S. Chandrasekhar (1983), Amartya Sen (1998), Venkatraman Ramakrishnan (2009), Kailash Satyarthi (2014), Abhijit Banerjee (2019)</li>
-              <li><strong>2018 (Sciences):</strong> Physics – Arthur Ashkin, Gérard Mourou, Donna Strickland; Chemistry – Frances Arnold, George Smith, Gregory Winter; Medicine – James Allison, Tasuku Honjo</li>
-              <li><strong>2019 (Sciences):</strong> Physics – James Peebles, Michel Mayor, Didier Queloz; Chemistry – John Goodenough, Stanley Whittingham, Akira Yoshino; Medicine – William Kaelin Jr, Peter Ratcliffe, Gregg Semenza</li>
-            </ul>
-          </div>
-
         </div>
       </main>
 

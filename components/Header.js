@@ -52,37 +52,37 @@ export default function Header() {
     {
       title: "Innovation Activity Laboratory",
       submenus: [
-        { name: "Projects", link: "/innovation/projects" },
-        { name: "Resources", link: "/innovation/resources" },
-        { name: "Success Stories", link: "/innovation/success-stories" },
+        { name: "Projects", link: "#" },
+        { name: "Resources", link: "#" },
+        { name: "Success Stories", link: "#" },
       ],
     },
     
     {
       title: "Education Activities",
       submenus: [
-        { name: "National Science day", link: "/education/nationalsciencday" },
-        { name: "Teacher/Students Workshop", link: "/education/Teacher/studentsworkshop" },
-        { name: "Science Demonstration lecture", link: "/education/sciencedemonstrationlecture" },
-        { name: "Sky Gazing/Observation", link: "/education/Sky Gazing/observation" },
+        { name: "National Science day", link: "#" },
+        { name: "Teacher/Students Workshop", link: "#" },
+        { name: "Science Demonstration lecture", link: "#" },
+        { name: "Sky Gazing/Observation", link: "#" },
       ],
     },
     {
       title: "Other Activities",
       submenus: [
-        { name: "Science Competition", link: "/education/sciencecompetition" },
-        { name: "Sunday Science School Activity", link: "/education/sundayscienceschoolactivity" },
-        { name: "Days Celebration", link: "/education/dayscelebration" },
-        { name: "Summer Camp", link: "/education/summeramp" },
+        { name: "Science Competition", link: "#" },
+        { name: "Sunday Science School Activity", link: "#" },
+        { name: "Days Celebration", link: "#" },
+        { name: "Summer Camp", link: "#" },
       ],
     },
  
     {
       title: "Notice",
       submenus: [
-        { name: "Latest Notice", link: "/notice/latest" },
-        { name: "Tender", link: "/notice/tender" },
-        { name: "Recruitment", link: "/notice/recruitment" },
+        { name: "Latest Notice", link: "#" },
+        { name: "Tender", link: "#" },
+        { name: "Recruitment", link: "#" },
       ],
     },
     { title: "Contact", link: "/contact" },
@@ -139,25 +139,43 @@ export default function Header() {
 </div>
 
       {/* 🧠 Top Header */}
+      {/* 🧠 Top Header */}
       <div className="bg-white flex flex-col items-center justify-center px-4 py-4 border-b">
         <div className="flex items-center justify-center gap-4 sm:gap-6">
-          <Image
-            src="/images/logo.png"
-            alt="RSIAC Logo"
-            width={110}
-            height={70}
-            className="object-contain"
-            priority
-          />
+           {/* Left Logo */}
+          <div >
+            <Image
+              src="/images/anna.logo.png" // left logo
+              alt="Left Logo"
+              width={100}
+              height={60}
+              className="object-contain"
+              priority
+            />
+          </div>
+
+
+            {/* Center Text */}
           <div className="text-center sm:text-left">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black">
               Rayat Science and Innovation Activity Centre
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-black mt-1 text-center">
+            <p className="text-sm sm:text-base md:text-lg text-black-700 mt-1 text-center">
               (National Council of Science Museums, Ministry of Culture, Govt. of India)
             </p>
           </div>
-        </div>
+
+         {/* Right Logo */}
+          <div>
+            <Image
+              src="/images/logo.png" //  right logo
+              alt="Right Logo"
+              width={100}
+              height={60}
+              className="object-contain"
+            />
+          </div>
+           </div>
       </div>
 
       {/* 📱 Mobile Menu Toggle */}

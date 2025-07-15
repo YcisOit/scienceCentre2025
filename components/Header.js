@@ -1,8 +1,12 @@
 'use client';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Menu, X, Youtube } from 'lucide-react';
+import { ChevronDown, Phone ,Menu, X,} from 'lucide-react';
 import Image from 'next/image';
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faYoutube, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+
+import { Youtube, Instagram, Facebook } from 'lucide-react';
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -32,7 +36,7 @@ export default function Header() {
       submenus: [
         { name: "About RSIAC", link: "/about" },
         { name: "Vision & Mission", link: "/vissionmission" },
-        { name: "Team", link: "/about/team" },
+        { name: "Committee", link: "/committee" },
       ],
     },
     {
@@ -57,19 +61,22 @@ export default function Header() {
     {
       title: "Education Activities",
       submenus: [
-        { name: "Workshops", link: "/education/workshops" },
-        { name: "Seminars", link: "/education/seminars" },
-        { name: "Outreach Programs", link: "/education/outreach" },
+        { name: "National Science day", link: "/education/nationalsciencday" },
+        { name: "Teacher/Students Workshop", link: "/education/Teacher/studentsworkshop" },
+        { name: "Science Demonstration lecture", link: "/education/sciencedemonstrationlecture" },
+        { name: "Sky Gazing/Observation", link: "/education/Sky Gazing/observation" },
       ],
     },
     {
-      title: "Other Facilities",
+      title: "Other Activities",
       submenus: [
-        { name: "Library", link: "/facilities/library" },
-        { name: "Labs", link: "/facilities/labs" },
-        { name: "Auditorium", link: "/facilities/auditorium" },
+        { name: "Science Competition", link: "/education/sciencecompetition" },
+        { name: "Sunday Science School Activity", link: "/education/sundayscienceschoolactivity" },
+        { name: "Days Celebration", link: "/education/dayscelebration" },
+        { name: "Summer Camp", link: "/education/summeramp" },
       ],
     },
+ 
     {
       title: "Notice",
       submenus: [
@@ -84,16 +91,52 @@ export default function Header() {
   return (
     <header ref={headerRef} className="w-full font-poppins">
       {/* 🔝 Topbar with circular YouTube icon */}
-      <div className="bg-[#000435] text-white px-4 py-1 text-sm flex justify-end items-center">
-  <Link
-    href="https://www.youtube.com/"
-    target="_blank"
-    className="hover:bg-red-500 transition rounded-md bg-white"
-  >
-    <Youtube className="w-5 h-5 text-red-600" />
-  </Link>
+
+<div className="bg-[#000435] text-[#ffffff] font-semibold py-1.5 px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+  {/* 📢 News Label + Text */}
+  <div className="flex items-center gap-2 text-sm sm:text-base leading-snug">
+    {/* Optional Label */}
+  
+    <span className="truncate">
+      🔬 Exciting Science Exhibition this month at RSIAC  • 📢 Workshop on Astronomy - Register Now! • 🛠️ Tinker Lab for Students is Now Live
+    </span>
+  </div>
+ <div className="flex items-center gap-2 text-sm text-white">
+  <Phone className="w-4 h-4 text-white" />
+  <span className="truncate">Contact Us: +91 8605145013</span>
 </div>
 
+
+  {/* 🔗 Social Media Icons */}
+
+<div className="flex items-center space-x-2 sm:justify-end pr-25">
+  <a
+    href="https://www.youtube.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-red-600 hover:text-white"
+  >
+    <FontAwesomeIcon icon={faYoutube} className="w-6 h-6" />
+  </a>
+  <a
+    href="https://www.instagram.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-pink-500 hover:text-white"
+  >
+    <FontAwesomeIcon icon={faInstagram} className="w-6 h-5" />
+  </a>
+  <a
+    href="https://www.facebook.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:text-white"
+  >
+    <FontAwesomeIcon icon={faFacebookF} className="w-6 h-5" />
+  </a>
+</div>
+
+</div>
 
       {/* 🧠 Top Header */}
       <div className="bg-white flex flex-col items-center justify-center px-4 py-4 border-b">

@@ -17,7 +17,7 @@ export default function ContactUsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full h-48 md:h-60">
+      <section className="relative w-full h-40 md:h-50">
         <Image
           src="/images/7.jpg"
           alt="Contact Banner"

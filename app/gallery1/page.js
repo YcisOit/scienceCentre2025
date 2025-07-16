@@ -19,7 +19,7 @@ export default function FunSciencePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full h-40 md:h-60">
+      <section className="relative w-full h-40 md:h-50">
         <Image
           src="/images/5.jpg"
           alt="Fun Science Banner"

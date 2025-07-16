@@ -12,7 +12,7 @@ export default function VisionMission() {
       <Header />
 
       {/* Hero */}
-      <div className="relative w-full h-40 md:h-56">
+      <div className="relative w-full h-40 md:h-50">
         <Image
           src="/images/VisionMission.jpg"
           alt="Vision & Mission background"

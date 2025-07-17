@@ -88,7 +88,7 @@ export default function FunSciencePage() {
               Gallery Highlights
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map((img, idx) => (
+              {['i1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '1.jpg'].map((img, idx) => (
                 <div
                   key={idx}
                   className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"

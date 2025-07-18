@@ -1,64 +1,97 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faPhoneAlt, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#073B3A] text-white pt-12 pb-6 px-4 bg-[url('/images/footerbackground.jpeg')] bg-cover bg-center bg-no-repeat">
-      <div className="max-w-7xl mx-auto">
+    <footer className="relative bg-[url('/images/footerbackground.JPG')] bg-cover bg-center bg-no-repeat text-white">
+      <div className="bg-black/70 py-12 px-4 md:px-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 text-sm">
 
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 text-sm">
-
-          {/* Logo & Description */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold leading-snug">
-              Rayat Science and Innovation Activity Centre, Satara
-            </h3>
-            <p className="text-gray-300 text-justify leading-relaxed">
-              Rayat Science and Innovation Activity Centre is one of the major tourist attractions and activity-based Science Centres of the Satara region, offering interactive exhibits and innovative science experiences.
+          {/* Logo + Intro */}
+          <div className="md:col-span-4 space-y-5">
+            <Image src="/images/logo.png" alt="Logo" width={100} height={60} className="object-contain" />
+            <h3 className="text-xl font-semibold leading-snug">
+               Rayat Science and Innovation Activity Centre, Satara         
+                  </h3>
+            <p className="text-gray-300 text-[15px]">
+              The Science and Innovation Activity Centre is one of the major tourist attractions and
+              activity-based science centres of the Satara region, offering interactive exhibits and innovative science experiences.
             </p>
             <div className="flex gap-4 pt-2">
-              <Link href="#" aria-label="Twitter">
-                <FontAwesomeIcon icon={faTwitter} className="text-white text-xl hover:text-teal-300 transition" />
-              </Link>
-              <Link href="#" aria-label="Instagram">
-                <FontAwesomeIcon icon={faInstagram} className="text-white text-xl hover:text-pink-400 transition" />
-              </Link>
+              <Link href="#"><FontAwesomeIcon icon={faTwitter} className="text-white text-xl hover:text-teal-300" /></Link>
+              <Link href="#"><FontAwesomeIcon icon={faInstagram} className="text-white text-xl hover:text-pink-400" /></Link>
+              <Link href="#"><FontAwesomeIcon icon={faYoutube} className="text-white text-xl hover:text-red-500" /></Link>
             </div>
           </div>
 
-          {/* Useful Links - Fully Centered */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h4 className="text-lg font-semibold text-white">Useful Links</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
-              <li><Link href="/about" className="hover:underline">About Us</Link></li>
-              <li><Link href="/science-park" className="hover:underline">Science Park</Link></li>
-              <li><Link href="/science-show" className="hover:underline">Science Show</Link></li>
-              <li><Link href="/galleries" className="hover:underline">Galleries</Link></li>
-              <li><Link href="/enquiry" className="hover:underline">Enquiry</Link></li>
-              <li><Link href="/contact" className="hover:underline">Contact Us</Link></li>
+          {/* Useful Links */}
+          <div className="md:col-span-2">
+            <h4 className="text-lg font-semibold mb-4">Useful Links</h4>
+            <ul className="space-y-2 text-[15px] text-gray-300">
+              {[
+                ["Home", "/"],
+                ["About Us", "/about"],
+                ["Science Park", "/science-park"],
+                ["Science Show", "/science-show"],
+                ["Galleries", "/galleries"],
+                ["Enquiry", "/enquiry"],
+                ["Contact Us", "/contact"],
+                ["Refund Policy", "/refund-policy"],
+              ].map(([label, href]) => (
+                <li key={label}>
+                  <Link href={href} className="hover:text-white">
+                    <span className="text-white mr-2">»</span>{label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Important Links */}
+          <div className="md:col-span-3">
+            <h4 className="text-lg font-semibold mb-4">Important Links</h4>
+            <ul className="space-y-2 text-[15px] text-gray-300">
+              {[
+                "Events", "Package Tour", "Tenders/Notices", "Future Attractions",
+                "Membership", "PCMC", "NCSM", "Privacy Policy", "Terms & Conditions"
+              ].map((label) => (
+                <li key={label}>
+                  <Link href="#" className="hover:text-white">
+                    <span className="text-white mr-2">»</span>{label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Contact Us</h4>
-            <p className="text-gray-300 leading-relaxed">
-              <strong>Rayat</strong><br />
-              Science and Innovation Activity Centre, Satara<br />
-              Varye, Taluka- Satara, Maharashtra
-            </p>
-            <p className="text-lg font-semibold text-white mt-2">+91 8605145013</p>
-            <p className="text-gray-300">rayatsciencecenter@gmail.com</p>
+          <div className="md:col-span-3">
+            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <div className="text-gray-300 space-y-3 text-[15px]">
+              <p className="flex items-start gap-2">
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="mt-1" />
+                <span>Varye, Taluka - Satara, Maharashtra</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <FontAwesomeIcon icon={faPhoneAlt} />
+                +91 8605145013
+              </p>
+              <p className="flex items-center gap-2">
+                <FontAwesomeIcon icon={faEnvelope} />
+                sciencecentre@gmail.com
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Footer Bottom */}
         <div className="mt-10 border-t border-white pt-4 text-center">
           <p className="text-sm sm:text-base font-medium">
-            © {new Date().getFullYear()} Rayat Science and Innovation Activity Centre, Satara | Powered by <span className="font-semibold">YCIS OIT, Satara</span>
+            © {new Date().getFullYear()} Rayat Science and Innovation Activity Centre, Satara | Powered by{" "}
+            <span className="font-semibold">YCIS OIT, Satara</span>
           </p>
         </div>
       </div>

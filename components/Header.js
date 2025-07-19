@@ -61,19 +61,20 @@ export default function Header() {
     {
       title: "Education Activities",
       submenus: [
-        { name: "National Science day", link: "#" },
-        { name: "Teacher/Students Workshop", link: "#" },
-        { name: "Science Demonstration lecture", link: "#" },
-        { name: "Sky Gazing/Observation", link: "#" },
+        { name: "National Science day", link: "/scienceday" },
+        { name: "Teacher/Students Workshop", link: "/workshop" },
+        { name: "Science Demonstration lecture", link: "/demonstration" },
+        { name: "Sky Gazing/Observation", link: "/skygazing" },
       ],
     },
     {
       title: "Other Activities",
       submenus: [
         { name: "Science Competition", link: "#" },
-        { name: "Sunday Science School Activity", link: "#" },
+        { name: "Sunday Science School Activity", link: "/sundayactivity" },
         { name: "Days Celebration", link: "#" },
         { name: "Summer Camp", link: "#" },
+          { name: "Liquid Nitrogen Show", link: "/nitrogenshow" },
       ],
     },
  
@@ -92,7 +93,7 @@ export default function Header() {
     <header ref={headerRef} className="w-full font-poppins">
       {/* 🔝 Topbar with circular YouTube icon */}
 
-<div className="bg-[#000435] text-[#ffffff] font-semibold py-1.5 px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+<div className="bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-[#ffffff] font-semibold py-1.5 px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
   {/* 📢 News Label + Text */}
   <div className="flex items-center gap-2 text-sm sm:text-base leading-snug">
     {/* Optional Label */}
@@ -179,14 +180,14 @@ export default function Header() {
       </div>
 
       {/* 📱 Mobile Menu Toggle */}
-      <div className="sm:hidden flex justify-end px-4 py-2 bg-[#000435] text-white">
+      <div className="sm:hidden flex justify-end px-4 py-2 bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-white">
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* 🌐 Navigation Bar */}
-      <nav className="bg-[#000435] text-white text-sm sm:text-base font-medium relative z-50">
+      <nav className="bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-white text-sm sm:text-base font-medium relative z-50">
         <ul
           className={`flex-col sm:flex-row sm:flex ${
             mobileMenuOpen ? 'flex' : 'hidden'

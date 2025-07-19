@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import Footer from "@/components/Footer";
 import Header from '@/components/Header';
 import Image from 'next/image';
@@ -15,6 +16,19 @@ import {
 } from 'lucide-react';
 
 export default function FunSciencePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (img) => {
+    setSelectedImage(img);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800">
       {/* Header */}
@@ -45,8 +59,7 @@ export default function FunSciencePage() {
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-10">
         <div className="bg-white border-2 border-black rounded-2xl shadow-xl p-6 md:p-10">
-
-          {/* Science Park Info Section */}
+          {/* Science Park Info */}
           <div className="space-y-6 text-lg leading-relaxed text-gray-700 text-justify">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-black mb-4">
               About the Science Park
@@ -108,7 +121,8 @@ export default function FunSciencePage() {
               {['s1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '1.jpg'].map((img, idx) => (
                 <div
                   key={idx}
-                  className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"
+                  onClick={() => openModal(img)}
+                  className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                 >
                   <Image
                     src={`/funscience/${img}`}
@@ -123,6 +137,33 @@ export default function FunSciencePage() {
           </div>
         </div>
       </main>
+
+      {/* Image Modal */}
+      {isModalOpen && selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          onClick={closeModal}
+        >
+          <div
+            className="relative bg-white/90 p-4 rounded-xl shadow-2xl max-w-3xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-4 text-gray-700 hover:text-red-600 text-3xl font-bold"
+            >
+              &times;
+            </button>
+            <Image
+              src={`/funscience/${selectedImage}`}
+              alt="Modal Exhibit"
+              width={1000}
+              height={600}
+              className="w-full h-auto object-contain rounded"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <Footer />

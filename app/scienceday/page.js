@@ -1,19 +1,41 @@
 'use client';
+import { useState } from 'react';
 import Footer from "@/components/Footer";
 import Header from '@/components/Header';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FlaskConical } from 'lucide-react';
-
 import {
   Home as HomeIcon,
   Lightbulb,
   BookOpen,
   Atom,
-  Sparkles
+  Sparkles,
+  FlaskConical
 } from 'lucide-react';
 
 export default function NationalScienceDayPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (img) => {
+    setSelectedImage(img);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setIsModalOpen(false);
+  };
+
+  const images = [
+    'student activity-5.jpg',
+    'student project.jpg',
+    'student visit-1.jpg',
+    'student visit-3.jpg',
+    'student visit.jpg',
+    'student electronic workshop-1.jpg'
+  ];
+
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800">
       {/* Header */}
@@ -80,17 +102,11 @@ export default function NationalScienceDayPage() {
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {[
-                'student activity-5.jpg',
-                'student project.jpg',
-                'student visit-1.jpg',
-                'student visit-3.jpg',
-                'student visit.jpg',
-                'student electronic workshop-1.jpg'
-              ].map((img, idx) => (
+              {images.map((img, idx) => (
                 <div
                   key={idx}
-                  className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"
+                  onClick={() => openModal(img)}
+                  className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                 >
                   <Image
                     src={`/images/${img}`}
@@ -105,6 +121,33 @@ export default function NationalScienceDayPage() {
           </div>
         </div>
       </main>
+
+      {/* Modal */}
+      {isModalOpen && selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          onClick={closeModal}
+        >
+          <div
+            className="relative bg-white/90 p-4 rounded-xl shadow-2xl max-w-3xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-4 text-gray-700 hover:text-red-600 text-3xl font-bold"
+            >
+              &times;
+            </button>
+            <Image
+              src={`/images/${selectedImage}`}
+              alt="Enlarged view"
+              width={1000}
+              height={600}
+              className="w-full h-auto object-contain rounded"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <Footer />

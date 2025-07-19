@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import Footer from "@/components/Footer";
 import Header from '@/components/Header';
 import Image from 'next/image';
@@ -13,6 +14,19 @@ import {
 } from 'lucide-react';
 
 export default function FunSciencePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (img) => {
+    setSelectedImage(img);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800">
       {/* Header */}
@@ -43,8 +57,6 @@ export default function FunSciencePage() {
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-10">
         <div className="bg-white border-2 border-black rounded-2xl shadow-xl p-6 md:p-10 space-y-12">
-
-          {/* Section Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-8 flex justify-center items-center gap-2">
             <Sparkles className="text-yellow-500" />
             Science Made Fun & Interactive
@@ -96,7 +108,8 @@ export default function FunSciencePage() {
               {['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map((img, idx) => (
                 <div
                   key={idx}
-                  className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"
+                  onClick={() => openModal(img)}
+                  className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                 >
                   <Image
                     src={`/funscience/${img}`}
@@ -111,6 +124,33 @@ export default function FunSciencePage() {
           </div>
         </div>
       </main>
+
+      {/* Modal */}
+      {isModalOpen && selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="relative bg-white/90 p-4 rounded-xl shadow-2xl max-w-3xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-4 text-gray-700 hover:text-red-600 text-3xl font-bold"
+            >
+              &times;
+            </button>
+            <Image
+              src={`/funscience/${selectedImage}`}
+              alt="Selected Exhibit"
+              width={1000}
+              height={600}
+              className="w-full h-auto object-contain rounded"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <Footer />

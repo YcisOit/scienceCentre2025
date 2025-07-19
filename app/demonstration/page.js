@@ -22,7 +22,7 @@ export default function demonstrationPage() {
       {/* Hero Section */}
       <section className="relative w-full h-40 md:h-50">
         <Image
-          src="/demolec/back.jpeg"
+          src="/images/d1.jpeg"
           alt="domolec Banner"
           layout="fill"
           objectFit="cover"
@@ -94,16 +94,16 @@ multimedia presentations on the topic.
           <div className="mt-12">
             <h3 className="text-2xl md:text-3xl font-semibold text-center text-black mb-8 flex justify-center items-center gap-2">
               <GalleryHorizontalEnd className="text-teal-600" />
-              Gallery Highlights
+              Demonstration Highlights
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map((img, idx) => (
+              {['d2.jpg', 'd3.jpg', 'd4.jpg', 'd5.jpg', 'd6.jpg', 'd7.jpg'].map((img, idx) => (
                 <div
                   key={idx}
                   className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"
                 >
                   <Image
-                    src={`/demolec/${img}`}
+                    src={`/images/${img}`}
                     alt={`Science Exhibit ${idx + 1}`}
                     width={500}
                     height={300}

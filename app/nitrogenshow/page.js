@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaLightbulb, FaBullseye } from 'react-icons/fa';
 
-export default function VisionMission() {
+export default function nitroliq() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
@@ -15,7 +15,7 @@ export default function VisionMission() {
       <div className="relative w-full h-40 md:h-50">
         <Image
           src="/images/li.jpg"
-          alt="Vision & Mission background"
+          alt=" background"
           layout="fill"
           objectFit="cover"
           className="brightness-75"
@@ -64,8 +64,14 @@ to students.
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Image */}
           <div className="rounded-lg overflow-hidden shadow-md">
-            <Image src="/images/li.jpg" alt="Open Air Expo" width={600} height={400} className="object-cover w-full h-full" />
-          </div>
+  <video
+    src="/video/7.mp4" // Replace with your actual video path
+    controls
+    className="object-cover w-full h-full"
+    width={600}
+    height={200}
+  />
+</div>
 
           {/* Text */}
           <div>

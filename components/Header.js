@@ -1,12 +1,11 @@
 'use client';
+
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Phone ,Menu, X,} from 'lucide-react';
+import { ChevronDown, Phone, Menu, X } from 'lucide-react';
 import Image from 'next/image';
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
-
-import { Youtube, Instagram, Facebook } from 'lucide-react';
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -57,27 +56,27 @@ export default function Header() {
         { name: "Success Stories", link: "#" },
       ],
     },
-    
     {
       title: "Education Activities",
       submenus: [
         { name: "National Science day", link: "/scienceday" },
-        { name: "Teacher/Students Workshop", link: "/workshop" },
+         { name: "Sunday Science School Activity", link: "/sundayactivity" },
+        { name: "Days Celebration", link: "#" },
+        { name: "Summer Camp", link: "#" },
         { name: "Science Demonstration lecture", link: "/demonstration" },
-        { name: "Sky Gazing/Observation", link: "/skygazing" },
+      
       ],
     },
     {
       title: "Other Activities",
       submenus: [
-        { name: "Science Competition", link: "#" },
-        { name: "Sunday Science School Activity", link: "/sundayactivity" },
-        { name: "Days Celebration", link: "#" },
-        { name: "Summer Camp", link: "#" },
-          { name: "Liquid Nitrogen Show", link: "/nitrogenshow" },
+        { name: "Science Competition", link: "/com" },
+        { name: "Teacher/Students Workshop", link: "/workshop" },
+        { name: "Sky Gazing/Observation", link: "/skygazing" },
+        { name: "Liquid Nitrogen Show", link: "/nitrogenshow" },
       ],
     },
- 
+    { title: "Photo Gallery", link: "/photogallery" },
     {
       title: "Notice",
       submenus: [
@@ -91,72 +90,36 @@ export default function Header() {
 
   return (
     <header ref={headerRef} className="w-full font-poppins">
-      {/* 🔝 Topbar with circular YouTube icon */}
+      {/* Topbar */}
+      <div className="bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-[#ffffff] font-semibold py-1.5 px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <div className="flex items-center gap-2 text-sm sm:text-base">
+          <span className="truncate">
+            🔬 Exciting Science Exhibition this month at RSIAC • 📢 Workshop on Astronomy - Register Now! • 🛠️ Tinker Lab for Students is Now Live
+          </span>
+        </div>
+        <div className="flex items-center gap-2 text-sm text-white">
+          <Phone className="w-4 h-4 text-white" />
+          <span>Contact Us: +91 8605145013</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <a href="https://www.youtube.com/" target="_blank" className="text-red-600 hover:text-white">
+            <FontAwesomeIcon icon={faYoutube} className="w-5 h-5" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" className="text-pink-500 hover:text-white">
+            <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" className="text-blue-600 hover:text-white">
+            <FontAwesomeIcon icon={faFacebookF} className="w-5 h-5" />
+          </a>
+        </div>
+      </div>
 
-<div className="bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-[#ffffff] font-semibold py-1.5 px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-  {/* 📢 News Label + Text */}
-  <div className="flex items-center gap-2 text-sm sm:text-base leading-snug">
-    {/* Optional Label */}
-  
-    <span className="truncate">
-      🔬 Exciting Science Exhibition this month at RSIAC  • 📢 Workshop on Astronomy - Register Now! • 🛠️ Tinker Lab for Students is Now Live
-    </span>
-  </div>
- <div className="flex items-center gap-2 text-sm text-white">
-  <Phone className="w-4 h-4 text-white" />
-  <span className="truncate">Contact Us: +91 8605145013</span>
-</div>
-
-
-  {/* 🔗 Social Media Icons */}
-
-<div className="flex items-center space-x-2 sm:justify-end pr-25">
-  <a
-    href="https://www.youtube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-red-600 hover:text-white"
-  >
-    <FontAwesomeIcon icon={faYoutube} className="w-6 h-6" />
-  </a>
-  <a
-    href="https://www.instagram.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-pink-500 hover:text-white"
-  >
-    <FontAwesomeIcon icon={faInstagram} className="w-6 h-5" />
-  </a>
-  <a
-    href="https://www.facebook.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-blue-600 hover:text-white"
-  >
-    <FontAwesomeIcon icon={faFacebookF} className="w-6 h-5" />
-  </a>
-</div>
-
-</div>
-
-      {/* 🧠 Top Header */}
-      {/* 🧠 Top Header */}
+      {/* Logo and Header Text */}
       <div className="bg-white flex flex-col items-center justify-center px-4 py-4 border-b">
         <div className="flex items-center justify-center gap-4 sm:gap-6">
-           {/* Left Logo */}
-          <div >
-            <Image
-              src="/images/anna.logo.png" // left logo
-              alt="Left Logo"
-              width={100}
-              height={60}
-              className="object-contain"
-              priority
-            />
+          <div>
+            <Image src="/images/anna.logo.png" alt="Left Logo" width={100} height={60} className="object-contain" priority />
           </div>
-
-
-            {/* Center Text */}
           <div className="text-center sm:text-left">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black">
               Rayat Science and Innovation Activity Centre
@@ -165,83 +128,99 @@ export default function Header() {
               (National Council of Science Museums, Ministry of Culture, Govt. of India)
             </p>
           </div>
-
-         {/* Right Logo */}
           <div>
-            <Image
-              src="/images/logo.png" //  right logo
-              alt="Right Logo"
-              width={100}
-              height={60}
-              className="object-contain"
-            />
+            <Image src="/images/logo.png" alt="Right Logo" width={100} height={60} className="object-contain" />
           </div>
-           </div>
+        </div>
       </div>
 
-      {/* 📱 Mobile Menu Toggle */}
+      {/* Mobile Menu Toggle */}
       <div className="sm:hidden flex justify-end px-4 py-2 bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-white">
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* 🌐 Navigation Bar */}
+      {/* Navbar with hover dropdown on desktop */}
       <nav className="bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-white text-sm sm:text-base font-medium relative z-50">
-        <ul
-          className={`flex-col sm:flex-row sm:flex ${
-            mobileMenuOpen ? 'flex' : 'hidden'
-          } sm:justify-center sm:space-x-4 py-2 px-2`}
-        >
-          {menuItems.map((item, index) => (
-            <li key={index} className="relative px-2">
-              {item.submenus ? (
-                <>
-                  <div
-                    className="flex items-center justify-between cursor-pointer hover:underline"
-                    onClick={() => toggleDropdown(index)}
-                  >
-                    <span>{item.title}</span>
-                    <ChevronDown className="w-4 h-4 ml-1" />
-                  </div>
-                  {openDropdown === index && (
-                    <div
-                      className={`bg-white text-black shadow-lg rounded mt-2 min-w-[180px] z-50 ${
-                        mobileMenuOpen ? 'relative' : 'absolute top-full left-0'
-                      }`}
+  <ul className={`flex-col sm:flex-row sm:flex ${mobileMenuOpen ? 'flex' : 'hidden'} sm:justify-center sm:space-x-4 py-2 px-2`}>
+    {menuItems.map((item, index) => (
+      <li
+        key={index}
+        className="relative px-2 group"
+        onMouseEnter={() => window.innerWidth >= 640 && setOpenDropdown(index)}
+        onMouseLeave={() => window.innerWidth >= 640 && setOpenDropdown(null)}
+      >
+        {item.submenus ? (
+          <>
+            <div
+              className="flex items-center justify-between cursor-pointer hover:underline"
+              onClick={() => {
+                if (window.innerWidth < 640) {
+                  toggleDropdown(index);
+                }
+              }}
+            >
+              <span>{item.title}</span>
+              <ChevronDown className="w-4 h-4 ml-1" />
+            </div>
+
+            {/* Desktop Hover Dropdown */}
+            <div className={`hidden sm:absolute sm:top-full sm:left-0 sm:bg-white sm:text-black sm:shadow-lg sm:rounded sm:mt-2 sm:min-w-[180px] sm:z-50 ${openDropdown === index ? 'sm:flex' : ''}`}>
+              <ul className="flex flex-col">
+                {item.submenus.map((submenu, subIndex) => (
+                  <li key={subIndex}>
+                    <Link
+                      href={submenu.link}
+                      className="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
+                      onClick={() => {
+                        setOpenDropdown(null);
+                        setMobileMenuOpen(false);
+                      }}
                     >
-                      <ul className="flex flex-col">
-                        {item.submenus.map((submenu, subIndex) => (
-                          <li key={subIndex}>
-                            <Link
-                              href={submenu.link}
-                              className="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
-                              onClick={() => {
-                                setOpenDropdown(null);
-                                setMobileMenuOpen(false);
-                              }}
-                            >
-                              {submenu.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </>
-              ) : (
-                <Link
-                  href={item.link}
-                  className="block hover:underline"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.title}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
-      </nav>
+                      {submenu.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Mobile Click Dropdown */}
+            {openDropdown === index && window.innerWidth < 640 && (
+              <div className="sm:hidden bg-white text-black shadow-lg rounded mt-2 min-w-[180px] z-50">
+                <ul className="flex flex-col">
+                  {item.submenus.map((submenu, subIndex) => (
+                    <li key={subIndex}>
+                      <Link
+                        href={submenu.link}
+                        className="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
+                        onClick={() => {
+                          setOpenDropdown(null);
+                          setMobileMenuOpen(false);
+                        }}
+                      >
+                        {submenu.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
+        ) : (
+          <Link
+            href={item.link}
+            className="block hover:underline"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {item.title}
+          </Link>
+        )}
+      </li>
+    ))}
+  </ul>
+</nav>
+
     </header>
   );
 }

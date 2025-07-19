@@ -14,7 +14,7 @@ export default function VisionMission() {
       {/* Hero */}
       <div className="relative w-full h-40 md:h-56">
         <Image
-          src="/images/w1.jpg"
+          src="/images/footerbackground.jpeg"
           alt="Vision & Mission background"
           layout="fill"
           objectFit="cover"
@@ -56,7 +56,7 @@ export default function VisionMission() {
           <Image src="/images/40.jpg" alt="Science Expo" width={400} height={250} className="object-cover w-full h-48" />
         </div>
         <div className="w-full sm:w-64 rounded-lg overflow-hidden shadow-md">
-          <Image src="/images/31.jpg" alt="Invention Exhibit" width={400} height={250} className="object-cover w-full h-48" />
+          <Image src="/images/50.jpg" alt="Invention Exhibit" width={400} height={250} className="object-cover w-full h-48" />
         </div>
       </div>
 
@@ -64,9 +64,15 @@ export default function VisionMission() {
       <div className="mt-20 bg-gray-50 py-12 px-6 md:px-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Image */}
-          <div className="rounded-lg overflow-hidden shadow-md">
-            <Image src="/images/w1.jpg" alt="Open Air Expo" width={600} height={400} className="object-cover w-full h-full" />
-          </div>
+         <div className="rounded-lg overflow-hidden shadow-md">
+  <video
+    src="/video/8.mp4" // Replace with your actual video path
+    controls
+    className="object-cover w-full h-full"
+    width={600}
+    height={400}
+  />
+</div>
 
           {/* Text */}
           <div>

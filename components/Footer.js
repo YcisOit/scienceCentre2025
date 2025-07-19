@@ -34,12 +34,10 @@ export default function Footer() {
               {[
                 ["Home", "/"],
                 ["About Us", "/about"],
-                ["Science Park", "/science-park"],
-                ["Science Show", "/science-show"],
-                ["Galleries", "/galleries"],
-                ["Enquiry", "/enquiry"],
+                ["Science Park", "/gallery5"],
+                ["Science Show", "/nitrogenshow"],
+                ["Galleries", "/photogallery"],
                 ["Contact Us", "/contact"],
-                ["Refund Policy", "/refund-policy"],
               ].map(([label, href]) => (
                 <li key={label}>
                   <Link href={href} className="hover:text-white">
@@ -50,22 +48,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Important Links */}
-          <div className="md:col-span-3">
-            <h4 className="text-lg font-semibold mb-4">Important Links</h4>
-            <ul className="space-y-2 text-[15px] text-gray-300">
-              {[
-                "Events", "Package Tour", "Tenders/Notices", "Future Attractions",
-                "Membership", "PCMC", "NCSM", "Privacy Policy", "Terms & Conditions"
-              ].map((label) => (
-                <li key={label}>
-                  <Link href="#" className="hover:text-white">
-                    <span className="text-white mr-2">»</span>{label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+         
+         {/* Important Links */}
+<div className="md:col-span-3">
+  <h4 className="text-lg font-semibold mb-4">Important Links</h4>
+  <ul className="space-y-2 text-[15px] text-gray-300">
+    {[
+      ["Events", "/"],
+      ["Tenders/Notices", "/notices"],
+      ["Future Attractions", "#"],
+      ["Privacy Policy", "#"],
+      ["Terms & Conditions", "#"]
+    ].map(([label, href]) => (
+      <li key={label}>
+        <Link href={href} className="hover:text-white">
+          <span className="text-white mr-2">»</span>{label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
           {/* Contact Info */}
           <div className="md:col-span-3">
@@ -81,7 +84,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <FontAwesomeIcon icon={faEnvelope} />
-                sciencecentre@gmail.com
+                  rsiacvarye@gmail.com
               </p>
             </div>
           </div>

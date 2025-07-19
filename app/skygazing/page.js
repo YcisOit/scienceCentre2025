@@ -12,7 +12,7 @@ export default function SkyObservation() {
       <Header />
 
       {/* Hero Section */}
-      <div className="relative w-full h-40 md:h-50">
+      <div className="relative w-full h-40 md:h-56">
         <Image
           src="/images/sky555.jpg"
           alt="Sky Observation Banner"
@@ -43,8 +43,8 @@ export default function SkyObservation() {
             Discover the Night Sky
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Explore the wonders of the universe through direct observation and interactive learning sessions.
-            Learn about constellations, planets, and celestial movements in a fun, engaging way!
+            
+            
           </p>
         </div>
 
@@ -67,24 +67,25 @@ export default function SkyObservation() {
         <div className="mt-16 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-              <span className="font-bold text-black">Sky Observation Activities</span>
+              <span className="font-bold text-black">Sky Observation Activities </span> 
             </h3>
-            <p className="text-gray-700 leading-relaxed font-medium">
-              Organizing a Sky Observation Program for students, parents, and teachers to
-              spark curiosity about astronomy and space science. Participants learn about celestial 
-              bodies through direct observation and understand concepts like planets, stars, 
-              constellations, and phases of the Moon.
-            </p>
+            <strong><p className="text-gray-700 leading-relaxed">
+              Organizing a Sky Observation Program for students , Parents & Teachers To 
+              spark curiosity about astronomy and space science, To learn about celestial 
+              bodies through direct observation, To understand basic concepts like planets, 
+              stars, constellations, and phases of the Moon. 
+            </p></strong>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="/images/sky4.jpg"
-              alt="Observation Session"
-              width={600}
-              height={400}
-              className="object-cover w-full h-full"
-            />
-          </div>
+<div className="rounded-lg overflow-hidden shadow-md">
+  <video
+    src="/video/1.mp4" // Replace with your actual video path
+    controls
+    className="object-cover w-full h-full"
+    width={600}
+    height={400}
+  />
+</div>
+
         </div>
       </div>
 

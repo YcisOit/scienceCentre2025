@@ -14,11 +14,11 @@ export default function PhotoGalleryPage() {
     '1.5.jpg',
     '1.6.jpg',
     '1.7.jpg',
-    '1.8.jpg',
-    '1.9.jpg',
-    '10.0.jpg',
-    '11.0.jpg',
-    '12.0.jpg',
+    '1.jpg',
+    '2.jpg',
+    '30.jpg',
+    '40.jpg',
+    '50.jpg',
   ];
 
   return (
@@ -27,9 +27,9 @@ export default function PhotoGalleryPage() {
       <Header />
 
       {/* Hero Banner */}
-      <section className="relative w-full h-40 md:h-60">
+      <section className="relative w-full h-40 md:h-50">
         <Image
-          src="/images/gallery-banner.jpg"
+          src="/images/bg1.jpg"
           alt="Photo Gallery Banner"
           layout="fill"
           objectFit="cover"

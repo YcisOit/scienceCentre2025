@@ -14,7 +14,7 @@ export default function SkyObservation() {
       {/* Hero Section */}
       <div className="relative w-full h-40 md:h-56">
         <Image
-          src="/images/sky555.jpg"
+          src="/images/8.jpg"
           alt="Sky Observation Banner"
           layout="fill"
           objectFit="cover"

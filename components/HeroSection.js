@@ -1,6 +1,7 @@
 'use client';
 import Image from "next/image";
 import { useState } from "react";
+import Link from 'next/link';
 
 const sliderImages = [
   "/images/1.jpg",
@@ -94,20 +95,15 @@ export default function HeroSection() {
               <span>
                 Rayat Science and Innovation Activity Centre is a unique non-formal learning centre in Satara. It aims to inculcate scientific temper and popularize science in rural Satara. The center is supported by RGSTC and NSCM, and has facilities including innovation halls, fun science exhibits, exhibitions, Nobel Prize showcase, mental health awareness and an outdoor science park.
               </span>
-              {showAboutModal ? (
-                <>
-                  <span className="block mt-2 text-gray-700">
-                    Inaugurated on February 14, 2020 in presence of renowned scientist Dr. Anil Kakodkar and Rayat President Sharadraoji Pawar. The centre organises activity based programmes and workshops for students and teachers.
-                  </span>
-                  <button onClick={() => setShowAboutModal(false)} className="text-teal-600 underline ml-2 text-sm">Show Less</button>
-                </>
-              ) : (
-                <button onClick={() => setShowAboutModal(true)} className="text-black underline ml-2 text-sm">Read More</button>
-              )}
+             
             </div>
           </div>
           {/* Learn More Button */}
-          <button className="bg-blue-950 hover:bg-blue-400 text-white px-8 py-3 rounded-lg text-base font-semibold shadow-md transition">LEARN MORE →</button>
+          <Link href="/about">
+  <button className="bg-blue-950 hover:bg-blue-400 text-white px-8 py-3 rounded-lg text-base font-semibold shadow-md transition">
+    LEARN MORE →
+  </button>
+</Link>
         </div>
         {/* Right Side - Images */}
         <div className="flex flex-col items-center gap-4">

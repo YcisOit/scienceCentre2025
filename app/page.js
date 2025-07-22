@@ -14,7 +14,7 @@ export default function HomePage() {
 
       <HeroSection />
       <UpcomingEvents />
-      <VideoPlayer />
+      {/* <VideoPlayer /> */}
       <Footer />
     </main>
   );

@@ -1,9 +1,10 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from 'next/image';
 import Link from 'next/link';
-import { Home as HomeIcon, GalleryHorizontalEnd } from 'lucide-react';
+import { Home as HomeIcon, GalleryHorizontalEnd, X } from 'lucide-react';
 
 export default function PhotoGalleryPage() {
   const galleryImages = [
@@ -14,22 +15,55 @@ export default function PhotoGalleryPage() {
     '1.5.jpg',
     '1.6.jpg',
     '1.7.jpg',
-    '1.8.jpg',
-    '1.9.jpg',
-    '10.0.jpg',
-    '11.0.jpg',
-    '12.0.jpg',
+    '1.jpg',
+    '2.jpg',
+    '30.jpg',
+    '40.jpg',
+    '50.jpg',
   ];
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const openModal = (index) => {
+    setCurrentIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentIndex(null);
+  };
+
+  const handleKeyDown = (e) => {
+    if (!isModalOpen) return;
+
+    if (e.key === 'ArrowRight') {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
+      );
+    } else if (e.key === 'ArrowLeft') {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
+      );
+    } else if (e.key === 'Escape') {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isModalOpen]);
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800">
-      {/* Header */}
       <Header />
 
       {/* Hero Banner */}
-      <section className="relative w-full h-40 md:h-60">
+      <section className="relative w-full h-40 md:h-50">
         <Image
-          src="/images/gallery-banner.jpg"
+          src="/images/bg1.jpg"
           alt="Photo Gallery Banner"
           layout="fill"
           objectFit="cover"
@@ -48,7 +82,7 @@ export default function PhotoGalleryPage() {
         </div>
       </section>
 
-      {/* Gallery Content */}
+      {/* Gallery */}
       <main className="max-w-7xl mx-auto px-4 py-10">
         <div className="bg-white border border-gray-400 rounded-xl shadow-lg p-6 md:p-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-teal-700 mb-10 flex justify-center items-center gap-2">
@@ -60,7 +94,8 @@ export default function PhotoGalleryPage() {
             {galleryImages.map((img, idx) => (
               <div
                 key={idx}
-                className="overflow-hidden rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform duration-300"
+                onClick={() => openModal(idx)}
+                className="cursor-pointer overflow-hidden rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform duration-300"
               >
                 <Image
                   src={`/images/${img}`}
@@ -75,7 +110,33 @@ export default function PhotoGalleryPage() {
         </div>
       </main>
 
-      {/* Footer */}
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="relative max-w-3xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full p-2 hover:bg-opacity-80 transition"
+              onClick={closeModal}
+            >
+              <X size={24} />
+            </button>
+            <Image
+              src={`/images/${galleryImages[currentIndex]}`}
+              alt="Full View"
+              width={1000}
+              height={700}
+              className="rounded-lg w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   );

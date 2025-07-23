@@ -59,7 +59,7 @@ export default function ContactUsPage() {
                 <input
                   type="email"
                   className="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-teal-500 outline-none"
-                  placeholder="example@email.com"
+                  placeholder="abc@gmail.com"
                 />
               </div>
 
@@ -109,7 +109,7 @@ export default function ContactUsPage() {
 
               <div className="flex items-center space-x-4">
                 <Mail className="text-black" size={22} />
-                <p>rayatsciencecenter@gmail.com</p>
+                <p>rsiacvarye@gmail.com</p>
               </div>
             </div>
           </div>

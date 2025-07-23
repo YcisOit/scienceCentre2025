@@ -14,7 +14,7 @@ export default function nitroliq() {
       {/* Hero */}
       <div className="relative w-full h-40 md:h-50">
         <Image
-          src="/images/li.jpg"
+          src="/images/5.jpg"
           alt=" background"
           layout="fill"
           objectFit="cover"
@@ -49,13 +49,13 @@ to students.
       {/* Image Section */}
       <div className="flex flex-wrap justify-center gap-6 px-4">
         <div className="w-full sm:w-64 rounded-lg overflow-hidden shadow-md">
-          <Image src="/images/1000221479.jpg" alt="Dino Park" width={400} height={250} className="object-cover w-full h-48" />
+          <Image src="/images/1.1.jpg" alt="Dino Park" width={400} height={250} className="object-cover w-full h-48" />
         </div>
         <div className="w-full sm:w-64 rounded-lg overflow-hidden shadow-md">
-          <Image src="/images/1000221497.jpg" alt="Science Expo" width={400} height={250} className="object-cover w-full h-48" />
+          <Image src="/images/1.2.jpg" alt="Science Expo" width={400} height={250} className="object-cover w-full h-48" />
         </div>
         <div className="w-full sm:w-64 rounded-lg overflow-hidden shadow-md">
-          <Image src="/images/1000221503.jpg" alt="Invention Exhibit" width={400} height={250} className="object-cover w-full h-48" />
+          <Image src="/images/1.3.jpg" alt="Invention Exhibit" width={400} height={250} className="object-cover w-full h-48" />
         </div>
       </div>
 

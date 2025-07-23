@@ -11,9 +11,10 @@ const menuItems = [
   {
     title: "About Us",
     submenus: [
+      { name: "About Sanstha", link: "/sanstha" },
       { name: "About RSIAC", link: "/about" },
       { name: "Vision & Mission", link: "/vissionmission" },
-      { name: "Committee", link: "/committee" },
+      { name: " Adminstrative Committee", link: "/committee" },
     ],
   },
   {

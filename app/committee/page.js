@@ -14,10 +14,10 @@ const committeeMembers = [
   {  name: "Mr. Navnath Ramchandra Jagdale", role: "Member", image: "member5.webp" },
   {  name: "Mr. Shrikant Kunden", role: "Member", image: "member6.jpg" },
   {  name: "Dr. Bharat Jadhav", role: "Member", image: "13.jpg" },
-  {  name: "dr. Sudhir Kumbhar", role: "CO-Ordineter", image: "member8.jpg" },
-  {  name: "Mr. Anil Govind Potdar", role: "member", image: "member9.jpeg" },
   {  name: "Mr. Anand Shantaram Aalekari", role: "Member", image: "member10.jpeg" },
-  {  name: "Mr. Vishal Vishal Lad", role: "Member", image: "member11.jpg" },
+  {  name: "Mr. Anil Govind Potdar", role: "member", image: "member9.jpeg" },
+  {  name: "Mr. Vishal  Lad", role: "Member", image: "member11.jpg" },
+  {  name: "Dr. Sudhir Kumbhar", role: "CO-Ordineter", image: "member8.jpg" },
   {  name: "Dr. Sarang S. Bhola", role: "Member Secretary", image: "member12.jpg" },
 ];
 

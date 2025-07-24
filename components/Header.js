@@ -40,8 +40,8 @@ const menuItems = [
     submenus: [
       { name: "National Science day", link: "/scienceday" },
       { name: "Sunday Science School Activity", link: "/sundayactivity" },
-      { name: "Days Celebration", link: "#" },
-      { name: "Summer Camp", link: "#" },
+      { name: "Days Celebration", link: "/Daycelebration" },
+      { name: "Summer Camp", link: "/SummerCamp" },
       { name: "Science Demonstration lecture", link: "/demonstration" },
     ],
   },

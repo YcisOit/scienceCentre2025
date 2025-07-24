@@ -15,6 +15,7 @@ const menuItems = [
       { name: "About RSIAC", link: "/about" },
       { name: "Vision & Mission", link: "/vissionmission" },
       { name: " Adminstrative Committee", link: "/committee" },
+      { name: " Reports & Presentation", link: "/reports" },
     ],
   },
   {

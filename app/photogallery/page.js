@@ -8,7 +8,7 @@ import { Home as HomeIcon, GalleryHorizontalEnd, X, UsersRound } from 'lucide-re
 
 export default function PhotoGalleryPage() {
   const photoGalleryImages = [
-    '1.1.jpg', '1.2.jpg', '1.3.jpg', '1.4.jpg',
+    '55.jpg', '1000238540.jpg', '1.3.jpg', '1.4.jpg',
     '1.5.jpg', '1.6.jpg', '1.7.jpg', '1.jpg',
     '2.jpg', '30.jpg', '40.jpg', '50.jpg',
   ];
@@ -21,6 +21,7 @@ export default function PhotoGalleryPage() {
     { src: 'r6.jpg', name: 'Honble Mr. Chandrakant Dalavi ' },
     { src: 'r7.jpg', name: 'Honble Mr. Vikas Deshmukh ' },
     { src: 'r8.jpg', name: 'Honble Mr. Chandrakant Dalavi' },
+    { src: '1.1.jpg', name: '' },
   ];
 
   const [activeTab, setActiveTab] = useState('gallery'); // 'gallery' or 'resource'

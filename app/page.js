@@ -6,6 +6,7 @@ import '@/lib/fontawesome'; // path where you saved the config
 import HeroSection from "@/components/HeroSection";
 import UpcomingEvents from '@/components/Events';
 import VideoPlayer from '@/components/VideoPlayer';
+import AwardsSlider from '@/components/AwardsSlider';
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <HeroSection />
       <UpcomingEvents />
       {/* <VideoPlayer /> */}
+      <AwardsSlider /> <br />
       <Footer />
     </main>
   );

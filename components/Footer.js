@@ -14,8 +14,8 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-5">
             <Image src="/images/logo.png" alt="Logo" width={100} height={60} className="object-contain" />
             <h3 className="text-xl font-semibold leading-snug">
-               Rayat Science and Innovation Activity Centre, Satara         
-                  </h3>
+              Rayat Science and Innovation Activity Centre, Satara
+            </h3>
             <p className="text-gray-300 text-[15px]">
               The Science and Innovation Activity Centre is one of the major tourist attractions and
               activity-based science centres of the Satara region, offering interactive exhibits and innovative science experiences.
@@ -48,27 +48,25 @@ export default function Footer() {
             </ul>
           </div>
 
-         
-         {/* Important Links */}
-<div className="md:col-span-3">
-  <h4 className="text-lg font-semibold mb-4">Important Links</h4>
-  <ul className="space-y-2 text-[15px] text-gray-300">
-    {[
-      ["Events", "/"],
-      ["Tenders/Notices", "/notices"],
-      ["Future Attractions", "#"],
-      ["Privacy Policy", "#"],
-      ["Terms & Conditions", "#"]
-    ].map(([label, href]) => (
-      <li key={label}>
-        <Link href={href} className="hover:text-white">
-          <span className="text-white mr-2">»</span>{label}
-        </Link>
-      </li>
-    ))}
-  </ul>
-</div>
-
+          {/* Important Links */}
+          <div className="md:col-span-3">
+            <h4 className="text-lg font-semibold mb-4">Important Links</h4>
+            <ul className="space-y-2 text-[15px] text-gray-300">
+              {[
+                ["Events", "/"],
+                ["Tenders/Notices", "/notices"],
+                ["Future Attractions", "#"],
+                ["Privacy Policy", "#"],
+                ["Terms & Conditions", "#"]
+              ].map(([label, href]) => (
+                <li key={label}>
+                  <Link href={href} className="hover:text-white">
+                    <span className="text-white mr-2">»</span>{label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Contact Info */}
           <div className="md:col-span-3">
@@ -76,7 +74,14 @@ export default function Footer() {
             <div className="text-gray-300 space-y-3 text-[15px]">
               <p className="flex items-start gap-2">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="mt-1" />
-                <span>Varye, Taluka - Satara, Maharashtra</span>
+                <Link
+                  href="https://maps.app.goo.gl/FHScbULGEUNrVQgV9?g_st=aw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white underline"
+                >
+                  Varye, Taluka - Satara, Maharashtra
+                </Link>
               </p>
               <p className="flex items-center gap-2">
                 <FontAwesomeIcon icon={faPhoneAlt} />
@@ -84,7 +89,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <FontAwesomeIcon icon={faEnvelope} />
-                  rsiacvarye@gmail.com
+                rsiacvarye@gmail.com
               </p>
             </div>
           </div>

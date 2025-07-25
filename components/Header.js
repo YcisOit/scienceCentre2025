@@ -95,7 +95,7 @@ const Navbar = () => {
           <span>Contact Us: +91 8605145013</span>
         </div>
         <div className="flex items-center space-x-2">
-          <a href="https://www.youtube.com/" target="_blank" className="text-red-600 hover:text-white">
+          <a href="https://www.youtube.com/@rayatsciencecentresatara4951" target="_blank" className="text-red-600 hover:text-white">
             <FontAwesomeIcon icon={faYoutube} className="w-5 h-5" />
           </a>
           <a href="https://www.instagram.com/" target="_blank" className="text-pink-500 hover:text-white">
@@ -111,7 +111,7 @@ const Navbar = () => {
       <div className="bg-white flex flex-col items-center justify-center px-4 py-4 border-b">
         <div className="flex items-center justify-center gap-4 sm:gap-6">
           <div>
-            <Image src="/images/anna.logo.png" alt="Left Logo" width={100} height={60} className="object-contain" priority />
+            <Image src="/images/logo.png" alt="Left Logo" width={100} height={60} className="object-contain" priority />
           </div>
           <div className="text-center sm:text-left">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black">
@@ -122,7 +122,7 @@ const Navbar = () => {
             </p>
           </div>
           <div>
-            <Image src="/images/logo.png" alt="Right Logo" width={100} height={60} className="object-contain" />
+            <Image src="/images/anna.logo.png" alt="Right Logo" width={100} height={60} className="object-contain" />
           </div>
         </div>
       </div>

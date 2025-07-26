@@ -11,7 +11,7 @@ export default function AboutSansthaPage() {
     {
       name: "Hon’ble. Sharadrao Govindrao Pawar",
       title: "President",
-      image: "/commitee/SP.jpg",
+      image: "/commitee/pawar1.webp",
     },
     {
       name: "Hon’ble Chandrakant Narayan Dalvi, IAS(Retd)",

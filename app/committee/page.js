@@ -7,18 +7,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 const committeeMembers = [
-  { name: "Mr. Vikas Vishwasrao Deshmukh, IAS (Retd.)", role: "President", image: "member1.jpg" },
-  {  name: "Dr. Shivaling Gangadhar Mankudle", role: "Vice President", image: "member2.webp" },
-  {  name: "Mr. Bandu Narayan Pawar", role: "Vice President", image: "member3.webp" },
-  {  name: "Mr. Sanjiv jaykumar Patil", role: "Member", image: "member4.webp" },
-  {  name: "Mr. Navnath Ramchandra Jagdale", role: "Member", image: "member5.webp" },
-  {  name: "Mr. Shrikant Kunden", role: "Member", image: "member6.jpg" },
-  {  name: "Dr. Bharat Jadhav", role: "Member", image: "13.jpg" },
-  {  name: "Mr. Anand Shantaram Aalekari", role: "Member", image: "member10.jpeg" },
-  {  name: "Mr. Anil Govind Potdar", role: "member", image: "member9.jpeg" },
-  {  name: "Mr. Vishal  Lad", role: "Member", image: "member11.jpg" },
-  {  name: "Dr. Sudhir Kumbhar", role: "CO-Ordineter", image: "member8.jpg" },
-  {  name: "Dr. Sarang S. Bhola", role: "Member Secretary", image: "member12.jpg" },
+  { name: "Hon’ble Shri. Vikas Deshmukh, IAS(Retd)", role: "President", image: "member1.jpg" },
+  {  name: "Hon’ble Prin. Dr. Shivling Gangadhar Menkudale", role: "Vice President", image: "member2.webp" },
+  {  name: "Hon'ble Bandu Narayan Pawar", role: "Vice President", image: "member3.webp" },
+  {  name: "Hon’ble Sanjiv Jaykumar Patil", role: "Member", image: "member4.webp" },
+  {  name: "Hon’ble Navnath Ramchandra Jagdale", role: "Member", image: "member5.webp" },
+  {  name: "Hon’ble Shrikant Kunden", role: "Member", image: "member6.jpg" },
+  {  name: "Hon’ble Prin. Dr. Bharat T. Jadhav", role: "Member", image: "13.jpg" },
+  {  name: "Hon’ble Anand Shantaram Aalekari", role: "Member", image: "member10.jpeg" },
+  {  name: "Hon’ble Anil Govind Potdar", role: "Member", image: "member9.jpeg" },
+  {  name: "Hon’ble Vishal Vijay Lad", role: "Member", image: "member11.jpg" },
+  {  name: "Hon’ble Dr. Sudhir Kumbhar", role: "CO-Ordinator", image: "member8.jpg" },
+  {  name: "Hon’ble Dr. Sarang S. Bhola", role: "Director", image: "member12.jpg" },
 ];
 
 export default function CommitteePage() {
@@ -27,7 +27,7 @@ export default function CommitteePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full h-48 md:h-60">
+      <section className="relative w-full h-40 md:h-50">
         <Image
           src="/commitee/background.webp"
           alt="Committee Banner"
@@ -68,7 +68,7 @@ export default function CommitteePage() {
                 </div>
                 <h2 className="text-lg font-semibold text-gray-800 mb-1">{member.name}</h2>
                 <p className="text-sm text-gray-600 mb-1">
-                  <span className="font-medium">Role:</span> {member.role}
+                  <span className="font-medium"></span> {member.role}
                 </p>
                 {/* <p className="text-xs text-gray-400">Sr. No: {member.no}</p> */}
               </div>
@@ -81,3 +81,4 @@ export default function CommitteePage() {
     </div>
   );
 }
+

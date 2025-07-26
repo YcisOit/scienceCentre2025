@@ -2,6 +2,8 @@
 import Footer from "@/components/Footer";
 import Header from '@/components/Header';
 import Image from 'next/image';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhoneAlt, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
 import {
   Home as HomeIcon,
@@ -97,8 +99,18 @@ export default function ContactUsPage() {
               <div className="flex items-start space-x-4">
                 <MapPin className="text-black mt-1" size={24} />
                 <div>
-                  <p className="font-medium">Rayat Science and Innovation Activity Centre</p>
-                  <p>Varye, Taluka- Satara, Maharashtra</p>
+                 
+                  <p className="flex items-start gap-2">
+               
+                <Link
+                  href="https://maps.app.goo.gl/FHScbULGEUNrVQgV9?g_st=aw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blavk underline"
+                >
+                  Rayat Science and Innovation Activity Centre,Varye, Taluka - Satara, Maharashtra
+                </Link>
+              </p>
                 </div>
               </div>
 

@@ -19,7 +19,7 @@ const menuItems = [
     ],
   },
   {
-    title: "Gallery",
+    title: "Science Gallery",
     submenus: [
       { name: "Rolling Ball Sculpture", link: "/gallery1" },
       { name: "Fun Science Gallery", link: "/gallery2" },
@@ -64,7 +64,11 @@ const menuItems = [
       { name: "Recruitment", link: "#" },
     ],
   },
+<<<<<<< HEAD
   { title: "WorkShop Photo", link: "/photoworkshop" },
+=======
+  { title: "Event", link: "/photoworkshop" },
+>>>>>>> 42a26d3f4f3bb0ed3d9c85e9e1b0c7ed2f9c3612
   { title: "Contact", link: "/contact" },
 ];
 
@@ -83,7 +87,6 @@ const Navbar = () => {
 
   return (
     <>
-
       {/* Topbar */}
       <div className="bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-white font-semibold py-1.5 px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div className="flex items-center gap-2 text-sm sm:text-base">
@@ -96,24 +99,22 @@ const Navbar = () => {
           <span>Contact Us: +91 8605145013</span>
         </div>
         <div className="flex items-center space-x-2">
-          <a href="https://www.youtube.com/@rayatsciencecentresatara4951" target="_blank" className="text-red-600 hover:text-white">
+          <a href="https://www.youtube.com/@rayatsciencecentresatara4951" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-white">
             <FontAwesomeIcon icon={faYoutube} className="w-5 h-5" />
           </a>
-          <a href="https://www.instagram.com/" target="_blank" className="text-pink-500 hover:text-white">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-white">
             <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
           </a>
-          <a href="https://www.facebook.com/" target="_blank" className="text-blue-600 hover:text-white">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-white">
             <FontAwesomeIcon icon={faFacebookF} className="w-5 h-5" />
           </a>
         </div>
       </div>
 
-      {/* Logo and Header Text */}
+      {/* Logo and Header */}
       <div className="bg-white flex flex-col items-center justify-center px-4 py-4 border-b">
         <div className="flex items-center justify-center gap-4 sm:gap-6">
-          <div>
-            <Image src="/images/logo.png" alt="Left Logo" width={100} height={60} className="object-contain" priority />
-          </div>
+          <Image src="/images/logo.png" alt="RSIAC Logo" width={100} height={60} className="object-contain" priority />
           <div className="text-center sm:text-left">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black">
               Rayat Science and Innovation Activity Centre
@@ -122,24 +123,27 @@ const Navbar = () => {
               (National Council of Science Museums, Ministry of Culture, Govt. of India)
             </p>
           </div>
-          <div>
-            <Image src="/images/anna.logo.png" alt="Right Logo" width={100} height={60} className="object-contain" />
-          </div>
+          <Image src="/images/anna.logo.png" alt="Rayat Logo" width={100} height={60} className="object-contain" />
         </div>
       </div>
 
-      {/* Navigation Bar */}
+      {/* Navbar */}
       <nav className="bg-gradient-to-r from-[#003c66] via-[#012230] to-[#012e53] text-white py-1 px-4 relative">
         {/* Mobile toggle */}
         <div className="flex justify-between items-center md:hidden">
-          <h1 className="text-lg font-semibold"></h1>
+          <div></div>
           <button onClick={toggleMobileMenu}>
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
-        {/* Nav list */}
-        <ul className={`flex flex-col md:flex-row md:justify-center md:gap-4 gap-2 mt-3 md:mt-0 ${mobileMenuOpen ? 'block' : 'hidden'} md:flex`}>
+        {/* Navigation List */}
+        <ul
+          className={`${
+            mobileMenuOpen ? 'flex' : 'hidden'
+          } flex-col md:flex-row md:flex md:justify-center mt-3 md:mt-0`}
+          role="menubar"
+        >
           {menuItems.map((item, index) => (
             <li
               key={index}
@@ -152,6 +156,7 @@ const Navbar = () => {
                   <div
                     className="flex items-center cursor-pointer px-2 py-1 hover:underline"
                     onClick={() => mobileMenuOpen && toggleDropdown(index)}
+                    aria-haspopup="true"
                   >
                     <span>{item.title}</span>
                     <ChevronDown className="ml-1 w-4 h-4" />
@@ -159,13 +164,16 @@ const Navbar = () => {
 
                   {/* Dropdown */}
                   {openDropdown === index && (
-                    <ul className="md:absolute md:top-full left-0 bg-white text-black shadow-md py-1 w-60 z-10 md:block">
+                    <ul className="md:absolute md:top-full left-0 bg-white text-black shadow-md py-1 w-60 z-50 md:block">
                       {item.submenus.map((submenu, subIndex) => (
                         <li key={subIndex}>
                           <Link
                             href={submenu.link}
                             className="block px-4 py-2 hover:bg-gray-200"
-                            onClick={() => setMobileMenuOpen(false)}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setOpenDropdown(null);
+                            }}
                           >
                             {submenu.name}
                           </Link>
@@ -178,7 +186,10 @@ const Navbar = () => {
                 <Link
                   href={item.link}
                   className="block px-2 py-1 hover:underline"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setOpenDropdown(null);
+                  }}
                 >
                   {item.title}
                 </Link>

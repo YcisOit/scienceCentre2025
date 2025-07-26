@@ -11,7 +11,7 @@ export default function AboutSansthaPage() {
     {
       name: "Hon’ble. Sharadrao Govindrao Pawar",
       title: "President",
-      image: "/commitee/pawar.jpeg",
+      image: "/commitee/SP.jpg",
     },
     {
       name: "Hon’ble Chandrakant Narayan Dalvi, IAS(Retd)",
@@ -67,20 +67,9 @@ export default function AboutSansthaPage() {
       <div className="max-w-5xl mx-auto px-4 md:px-8 py-10 space-y-12">
         {/* About Sanstha Section */}
         <section>
-          {/* <div className="w-full h-64 relative rounded-xl overflow-hidden border mb-6">
-            <Image
-              src="/images/60.jpg"
-              alt="Rayat Science and Innovation Activity Centre"
-              layout="fill"
-              objectFit="cover"
-              className="object-cover"
-            />
-          </div> */}
-
           <h2 className="text-2xl font-bold text-black mb-4">
             About Rayat Shikshan Sanstha
           </h2>
-
           <p className="text-gray-700 leading-relaxed mb-3">
             Rayat Shikshan Sanstha is one of Asia’s leading educational
             institutions. Founded by Dr. Karmaveer Bhaurao Patil on October 4,
@@ -106,12 +95,11 @@ export default function AboutSansthaPage() {
 
       {/* Leadership Team Section */}
       <section className="py-10 bg-gray-50">
-        <div className="w-full px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl font-bold text-center text-black mb-10">
             Leadership Team
           </h2>
-
-          <div className="flex justify-center gap-8 flex-wrap">
+          <div className="flex flex-wrap justify-center gap-15">
             {committeeMembers.map((member, index) => (
               <div
                 key={index}

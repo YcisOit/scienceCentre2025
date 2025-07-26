@@ -19,7 +19,7 @@ const menuItems = [
     ],
   },
   {
-    title: "Gallery",
+    title: "Science Gallery",
     submenus: [
       { name: "Rolling Ball Sculpture", link: "/gallery1" },
       { name: "Fun Science Gallery", link: "/gallery2" },
@@ -64,6 +64,7 @@ const menuItems = [
       { name: "Recruitment", link: "#" },
     ],
   },
+  { title: "Event", link: "/photoworkshop" },
   { title: "Contact", link: "/contact" },
 ];
 
@@ -138,7 +139,8 @@ const Navbar = () => {
         </div>
 
         {/* Nav list */}
-        <ul className={`flex flex-col md:flex-row md:justify-center md:gap-4 gap-2 mt-3 md:mt-0 ${mobileMenuOpen ? 'block' : 'hidden'} md:flex`}>
+        <ul className={`flex flex-col md:flex-row md:justify-center gap-0 mt-3 md:mt-0 ${mobileMenuOpen ? 'block' : 'hidden'} md:flex`}>
+
           {menuItems.map((item, index) => (
             <li
               key={index}

@@ -15,10 +15,10 @@ const committeeMembers = [
   {  name: "Hon’ble Shrikant Kunden", role: "Member", image: "member6.jpg" },
   {  name: "Hon’ble Prin. Dr. Bharat T. Jadhav", role: "Member", image: "13.jpg" },
   {  name: "Hon’ble Anand Shantaram Aalekari", role: "Member", image: "member10.jpeg" },
-  {  name: "Hon’ble Anil Govind Potdar", role: "member", image: "member9.jpeg" },
+  {  name: "Hon’ble Anil Govind Potdar", role: "Member", image: "member9.jpeg" },
   {  name: "Hon’ble Vishal Vijay Lad", role: "Member", image: "member11.jpg" },
-  {  name: "Hon’ble Dr. Sudhir Kumbhar", role: "CO-Ordineter", image: "member8.jpg" },
-  {  name: "Hon’ble Dr. Sarang S. Bhola", role: "Member Secretary", image: "member12.jpg" },
+  {  name: "Hon’ble Dr. Sudhir Kumbhar", role: "CO-Ordinator", image: "member8.jpg" },
+  {  name: "Hon’ble Dr. Sarang S. Bhola", role: "Director", image: "member12.jpg" },
 ];
 
 export default function CommitteePage() {

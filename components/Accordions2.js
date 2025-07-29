@@ -59,9 +59,6 @@ const YearData = [
    
     ],
   },
-  
-  
- 
 ];
 
 export default function Accordion() {

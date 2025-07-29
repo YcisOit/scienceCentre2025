@@ -64,11 +64,7 @@ const menuItems = [
       { name: "Recruitment", link: "#" },
     ],
   },
-<<<<<<< HEAD
-  { title: "WorkShop Photo", link: "/photoworkshop" },
-=======
   { title: "Event", link: "/photoworkshop" },
->>>>>>> 42a26d3f4f3bb0ed3d9c85e9e1b0c7ed2f9c3612
   { title: "Contact", link: "/contact" },
 ];
 

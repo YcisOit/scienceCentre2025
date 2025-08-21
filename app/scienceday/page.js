@@ -29,11 +29,11 @@ export default function NationalScienceDayPage() {
 
   const images = [
     'student activity-5.jpg',
-    'student project.jpg',
-    'student visit-1.jpg',
+    'Student project.jpg',
+    'Student visit-1.jpg',
     'student visit-3.jpg',
-    'student visit.jpg',
-    'student electronic workshop-1.jpg'
+    'Student visit.jpg',
+    'Student electronic workshop-1.jpg'
   ];
 
   return (

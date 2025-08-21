@@ -11,27 +11,27 @@ export default function AboutSansthaPage() {
     {
       name: "Hon’ble. Sharadrao Govindrao Pawar",
       title: "President",
-      image: "/committee/pawar1.webp",
+      image: "/commitee/pawar1.webp",
     },
     {
       name: "Hon’ble Chandrakant Narayan Dalvi, IAS(Retd)",
       title: "Chairman",
-      image: "/committee/chairman1.jpg",
+      image: "/commitee/chairman1.jpg",
     },
     {
       name: "Hon’ble Dr. Anil Patil",
       title: "Organizer",
-      image: "/committee/Organizer.jpg",
+      image: "/commitee/Organizer.jpg",
     },
     {
       name: "Hon’ble Adv. Bhagirath Nivrutti Shinde",
       title: "Vice Chairman",
-      image: "/committee/VICE.jpeg",
+      image: "/commitee/VICE.jpeg",
     },
     {
       name: "Hon’ble Shri. Vikas Deshmukh, IAS(Retd)",
       title: "Secretary",
-      image: "/committee/SECRETY.jpeg",
+      image: "/commitee/SECRETY.jpeg",
     },
   ];
 

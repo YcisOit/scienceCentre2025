@@ -105,14 +105,14 @@ export default function FunSciencePage() {
               Gallery Highlights
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', 'e1.jpg'].map((img, idx) => (
+              {['7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg'].map((img, idx) => (
                 <div
                   key={idx}
                   onClick={() => openModal(img)}
                   className="overflow-hidden rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                 >
                   <Image
-                    src={`/funscience/${img}`}
+                    src={`/gallery/${img}`}
                     alt={`Science Exhibit ${idx + 1}`}
                     width={500}
                     height={300}

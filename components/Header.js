@@ -65,6 +65,7 @@ const menuItems = [
     ],
   },
   { title: "Event", link: "/photoworkshop" },
+  { title: "News", link: "/news" },
   { title: "Contact", link: "/contact" },
 ];
 

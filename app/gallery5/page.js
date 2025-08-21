@@ -92,7 +92,7 @@ export default function FunSciencePage() {
             <p className="flex gap-3 items-start">
               <Camera className="text-indigo-600 mt-1" />
               <span>
-                ...the <strong>principle of a camera</strong>...
+                ...the <strong>principle of  camera</strong>...
               </span>
             </p>
 

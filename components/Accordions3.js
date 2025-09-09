@@ -6,7 +6,7 @@ const YearData = [
     title: '2022 ',
     isOpen: true,
     content: [
-    { no: 1, News: 'Science Centre Reopening at 2022 news ', link: '/news/2022_1.jpeg' }
+    { no: 1,Date:'28/12/2022', News: 'Science Centre Reopening  ',Media:'Punya Nagari', link: '/news/2022_1.jpeg' }
         
       ],
   },
@@ -14,10 +14,10 @@ const YearData = [
     title: '2024',
     isOpen: true,
     content: [
-      { no: 1, News: 'National Science Day Celebration with schools student conducting competitions at Science Centre 28-2-2024 news ', link: '/news/2024_1.jpg' },
-    { no: 2, News: 'Science Centre organised Sky Gazing Camp for pink moon for students at 2024 news   ', link: '/news/2024_2.jpg' },
-     { no: 3, News: 'Students ISRO workshop  news ', link: '/news/2024_3.jpg' },
-     { no: 4, News: 'Science Centre Science Teachers Workshop 16_10_2024  news', link: '/news/2024_4.jpg' }
+      { no: 1,Date:'05/03/2024', News: 'National Science Day Celebration with schools student conducting competitions at Science Centre  ',Media:'Aikya', link: '/news/2024_1.jpg' },
+    { no: 2,Date:'08/05/2024', News: 'Science Centre organised Sky Gazing Camp for pink moon for students ',Media:'Tanun Bharat', link: '/news/2024_2.jpg' },
+     { no: 3,Date:'03/09/2024', News: 'Students ISRO workshop  news ',Media:'Prabhat', link: '/news/2024_3.jpg' },
+     { no: 4,Date:'16/10/2024', News: 'Science Centre Science Teachers Workshop ',Media:'Punya Nagari', link: '/news/2024_4.jpg' }
     ],
     
   },
@@ -25,7 +25,7 @@ const YearData = [
     title: '2025',
   isOpen: true,
     content: [
-      { no: 1, News: 'Student Visit at science centre 21_4_2025  news', link: '/news/2025_1.jpg' },
+      { no: 1,Date:'21/04/2025', News: 'Student Visit at science centre ',Media:'Punya Nagari', link: '/news/2025_1.jpg' },
        
         
     ]
@@ -58,7 +58,9 @@ export default function Accordion() {
                 <thead className="bg-[#3d1a55] text-white">
                   <tr>
                     <th className="border px-3 py-2">Sr.no</th>
+                    <th className="border px-3 py-2">Date</th>
                     <th className="border px-3 py-2">News</th>
+                    <th className="border px-3 py-2">Media</th>
                     <th className="border px-3 py-2">Photos</th>
                   </tr>
                 </thead>
@@ -66,7 +68,9 @@ export default function Accordion() {
                   {item.content.map((row, i) => (
                     <tr key={i} className="text-center">
                       <td className="border px-3 py-2">{row.no}</td>
+                      <td className="border px-3 py-2">{row.Date}</td>
                       <td className="border px-3 py-2">{row.News}</td>
+                      <td className="border px-3 py-2">{row.Media}</td>
                       <td className="border px-3 py-2 text-blue-600 underline cursor-pointer">
                         <a href={row.link} target="_blank" rel="noopener noreferrer">View</a>
                       </td>

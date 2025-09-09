@@ -6,18 +6,18 @@ const YearData = [
     title: '2020-2021 ',
     isOpen: true,
     content: [
-    { no: 1, Event: 'Teachers Workshop', link: '/event/workshop2020-21.jpg' },
-        { no: 2,Event: 'Liquid Nitrogen Show', link: '/event/nitro2020-21.jpg' }
+          { no: 1,Date:'28/02/2020', Event: 'Teachers Workshop',participant:'120', link: '/event/workshop2020-21.jpg' },
+          { no: 2,Date:'28/02/2020',Event: 'Liquid Nitrogen Show',participant:'120', link: '/event/nitro2020-21.jpg' }
       ],
   },
   {
     title: '2021-2022',
     isOpen: true,
     content: [
-       { no: 1, Event: 'Competition', link: '/event/compitition2021-22.jpg' },
-        { no: 2, Event: 'Sky Gazing ', link: '/event/sky2021-22.jfif' },
-         { no: 3, Event: 'Liquid Nitrogen Show', link: '/event/nitro2020-21.jpg' },
-          { no: 4, Event: 'Workshop ', link: '/event/workshop2021-22.jfif' }
+       { no: 1,Date:'22/10/2021',Event: 'Speech Competition',participant:'80', link: '/event/compitition2021-22.jpg' },
+        { no: 2,Date:'20/11/2021', Event: 'Sky Gazing ',participant:'120', link: '/event/sky2021-22.jfif' },
+         { no: 3,Date:'22/11/2021', Event: 'Liquid Nitrogen Show',participant:'50', link: '/event/nitro2020-21.jpg' },
+          { no: 4,Date:'22/02/2022', Event: 'Workshop ',participant:'60', link: '/event/workshop2021-22.jfif' }
 
     ],
     
@@ -26,10 +26,10 @@ const YearData = [
     title: '2022-2023',
   isOpen: true,
     content: [
-      { no: 1, Event: 'Competition', link: '/event/compitition2022-23.jfif' },
-       { no: 2, Event: 'Sky Gazing', link: '/event/sky2022-23.jpg' },
-        { no: 3, Event: 'Liquid Nitrogen Show', link: '/event/nitro2022-23.jpg' },
-         { no: 4, Event: 'Workshop', link: '/event/workshop2022-23.jfif' }
+      { no: 1,Date:'28/05/2022', Event: 'Competition-Drawing',participant:'60', link: '/event/compitition2022-23.jfif' },
+       { no: 2,Date:'28/10/2022', Event: 'Sky Gazing',participant:'25', link: '/event/sky2022-23.jpg' },
+        { no: 3,Date:'12/12/2022', Event: 'Liquid Nitrogen Show',participant:'80', link: '/event/nitro2022-23.jpg' },
+         { no: 4,Date:'20/02/2023', Event: 'Workshop',participant:'70', link: '/event/workshop2022-23.jfif' }
         
     ]
   },
@@ -37,11 +37,11 @@ const YearData = [
     title: '2023-2024 ',
     isOpen: true,
     content: [
-  { no: 1, Event: 'Zero Shadow Day', link: '/event/zeroday2023-24.jpg' },
-    { no: 2, Event: 'Competition', link: '/event/compitition2023-24.jpg' },
-       { no: 3, Event: 'Sky Gazing', link: '/event/sky2023-24.jpg' },
-        { no: 4, Event: 'Liquid Nitrogen Show', link: '/event/nitro2023-24.jpg' },
-         { no: 5, Event: 'Workshop', link: '/event/workshop2023-24.jpg' }
+  { no: 1,Date:'12/03/2023', Event: 'Zero Shadow Day',participant:'80', link: '/event/zeroday2023-24.jpg' },
+    { no: 2,Date:'05/05/2023', Event: 'Competition',participant:'30', link: '/event/compitition2023-24.jpg' },
+       { no: 3,Date:'11/05/2023', Event: 'Sky Gazing',participant:'25', link: '/event/sky2023-24.jpg' },
+        { no: 4,Date:'20/08/2023', Event: 'Liquid Nitrogen Show',participant:'70', link: '/event/nitro2023-24.jpg' },
+         { no: 5,Date:'20/02/2024', Event: 'Workshop',participant:'50', link: '/event/workshop2023-24.jpg' }
    
     ],
   },
@@ -49,13 +49,13 @@ const YearData = [
     title: '2024-2025',
     isOpen: true,
     content: [
- { no: 1, Event: 'National Tiger Day ', link: '/event/workshop2020-21.jpg' },
-  { no: 1, Event: 'Competition', link: '/event/compitition2024-25.jpg' },
-   { no: 1, Event: 'Zero Shadow Day', link: '/event/zero2024-25.jpg' },
-    { no: 1, Event: 'Sky Gazing ', link: '/event/sky2024-25.jpg' },
-     { no: 1, Event: 'Liquid Nitrogen Show', link: '/event/nitro2024-25.jpg' },
-      { no: 1, Event: 'ISRO Workshop', link: '/event/isro2024-25.jpg' },
-       { no: 1, Event: 'Teachers Workshop', link: '/event/teacherworkshop2024-25.jpg' },
+ { no: 1, Date:'05/05/2024',Event: 'National Tiger Day ',participant:'60', link: '/event/workshop2020-21.jpg' },
+  { no: 1,Date:'11/05/2024', Event: 'Competition',participant:'25', link: '/event/compitition2024-25.jpg' },
+   { no: 1,Date:'14/05/2024', Event: 'Zero Shadow Day',participant:'110', link: '/event/zero2024-25.jpg' },
+    { no: 1,Date:'29/07/2024', Event: 'Sky Gazing ',participant:'230', link: '/event/sky2024-25.jpg' },
+     { no: 1,Date:'30/08/2024', Event: 'Liquid Nitrogen Show',participant:'290', link: '/event/nitro2024-25.jpg' },
+      { no: 1,Date:'16/09/2024', Event: 'ISRO Workshop',participant:'89', link: '/event/isro2024-25.jpg' },
+       { no: 1,Date:'10/12/2024', Event: 'Teachers Workshop',participant:'60', link: '/event/teacherworkshop2024-25.jpg' },
    
     ],
   },
@@ -87,15 +87,19 @@ export default function Accordion() {
                 <thead className="bg-[#3d1a55] text-white">
                   <tr>
                     <th className="border px-3 py-2">Sr.no</th>
+                    <th className="border px-3 py-2">Date</th>
                     <th className="border px-3 py-2">Event</th>
-                    <th className="border px-3 py-2">Photos</th>
+                     <th className="border px-3 py-2">No.of participant</th>
+                     <th className="border px-3 py-2">Photos</th>
                   </tr>
                 </thead>
                 <tbody>
                   {item.content.map((row, i) => (
                     <tr key={i} className="text-center">
                       <td className="border px-3 py-2">{row.no}</td>
+                       <td className="border px-3 py-2">{row.Date}</td>
                       <td className="border px-3 py-2">{row.Event}</td>
+                      <td className="border px-3 py-2">{row.participant}</td>
                       <td className="border px-3 py-2 text-blue-600 underline cursor-pointer">
                         <a href={row.link} target="_blank" rel="noopener noreferrer">View</a>
                       </td>

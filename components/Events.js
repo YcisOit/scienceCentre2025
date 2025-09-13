@@ -1,23 +1,35 @@
 'use client';
-
 import { useState } from 'react';
 import Image from 'next/image';
 
 const upcomingEvents = [
   {
     id: 1,
-    name: 'Science Fair 2025',
-    image: '/images/slide4.jpg',
+    name: 'Sunday Funday Science School',
+    image: '/images/event1.jpg',
+    message: 'Join us for science learning experience!',
+    link: 'https://forms.gle/qzPxMtJ58XzTgzgc8',
   },
   {
     id: 2,
-    name: 'Astronomy Night',
-    image: '/images/1.jpg',
+    name: 'Arduino Coding',
+    image: '/images/even2.jpg',
+    message: 'Join us Our Workshop learning scince and Coding!',
+    link: 'https://example.com/sunday-funday',
   },
   {
     id: 3,
+    name: 'Astronomy Night',
+    image: '/images/1.jpg',
+    message: 'Explore the stars and planets with our experts!',
+    link: 'https://example.com/astronomy-night',
+  },
+  {
+    id: 4,
     name: 'Innovation Workshop',
-    image: '/images/slide3.jpg',
+    image: '/images/slide4.jpg',
+    message: 'Unleash your creativity and learn innovative skills!',
+    link: 'https://example.com/innovation-workshop',
   },
 ];
 
@@ -56,11 +68,12 @@ export default function UpcomingEvents() {
         </div>
       )}
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {/* Events in one line */}
+      <div className="max-w-7xl mx-auto flex gap-8 justify-center">
         {upcomingEvents.map((event) => (
           <div
             key={event.id}
-            className="bg-white/90 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 border border-gray-200"
+            className="w-72 bg-white/90 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 border border-gray-200"
           >
             {/* Image Section */}
             <div
@@ -80,9 +93,15 @@ export default function UpcomingEvents() {
               <h3 className="text-xl font-semibold text-gray-800">
                 {event.name}
               </h3>
-              <p className="text-sm text-gray-500 mt-2">
-                Don't miss this exciting event!
-              </p>
+              <p className="text-sm text-gray-500 mt-2">{event.message}</p>
+              <a
+                href={event.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block px-4 py-2 bg-[#1a1a2e] text-white rounded-lg shadow hover:bg-[#16213e] transition-all duration-300"
+              >
+                registration Form
+              </a>
             </div>
           </div>
         ))}

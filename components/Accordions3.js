@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-const YearData = [
+const news = [
   {
     title: '2022 ',
     isOpen: true,
@@ -41,7 +41,7 @@ export default function Accordion() {
 
   return (
     <div className="max-w-4xl mx-auto mt-10 space-y-2">
-      {YearData.map((item, index) => (
+      {news.map((item, index) => (
         <div key={index}>
           <button
             className={`w-full text-left px-4 py-3 font-semibold ${

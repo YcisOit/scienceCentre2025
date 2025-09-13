@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-const YearData = [
+const event= [
   {
     title: '2020-2021 ',
     isOpen: true,
@@ -50,12 +50,14 @@ const YearData = [
     isOpen: true,
     content: [
  { no: 1, Date:'05/05/2024',Event: 'National Tiger Day ',participant:'60', link: '/event/workshop2020-21.jpg' },
-  { no: 1,Date:'11/05/2024', Event: 'Competition',participant:'25', link: '/event/compitition2024-25.jpg' },
-   { no: 1,Date:'14/05/2024', Event: 'Zero Shadow Day',participant:'110', link: '/event/zero2024-25.jpg' },
-    { no: 1,Date:'29/07/2024', Event: 'Sky Gazing ',participant:'230', link: '/event/sky2024-25.jpg' },
-     { no: 1,Date:'30/08/2024', Event: 'Liquid Nitrogen Show',participant:'290', link: '/event/nitro2024-25.jpg' },
-      { no: 1,Date:'16/09/2024', Event: 'ISRO Workshop',participant:'89', link: '/event/isro2024-25.jpg' },
-       { no: 1,Date:'10/12/2024', Event: 'Teachers Workshop',participant:'60', link: '/event/teacherworkshop2024-25.jpg' },
+  { no: 2,Date:'11/05/2024', Event: 'Competition',participant:'25', link: '/event/compitition2024-25.jpg' },
+   { no: 3,Date:'14/05/2024', Event: 'Zero Shadow Day',participant:'110', link: '/event/zero2024-25.jpg' },
+    { no: 4,Date:'29/07/2024', Event: 'Sky Gazing ',participant:'230', link: '/event/sky2024-25.jpg' },
+     { no: 5,Date:'30/08/2024', Event: 'Liquid Nitrogen Show',participant:'290', link: '/event/nitro2024-25.jpg' },
+      { no: 6,Date:'16/09/2024', Event: 'ISRO Workshop',participant:'89', link: '/event/isro2024-25.jpg' },
+       { no: 7,Date:'10/12/2024', Event: 'Teachers Workshop',participant:'60', link: '/event/teacherworkshop2024-25.jpg' },
+        { no: 8,Date:'13/09/2025', Event: 'Sunday Funday Science School',participant:'50', link: '/images/event1.jpg' },
+         { no: 9,Date:'', Event: 'Arduino Coding',participant:'50', link: '/images/even2.jpg' },
    
     ],
   },
@@ -70,7 +72,7 @@ export default function Accordion() {
 
   return (
     <div className="max-w-4xl mx-auto mt-10 space-y-2">
-      {YearData.map((item, index) => (
+      {event.map((item, index) => (
         <div key={index}>
           <button
             className={`w-full text-left px-4 py-3 font-semibold ${

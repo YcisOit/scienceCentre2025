@@ -8,9 +8,9 @@ import { Home as HomeIcon, GalleryHorizontalEnd, X, UsersRound } from 'lucide-re
 
 export default function PhotoGalleryPage() {
   const photoGalleryImages = [
-    '55.jpg', '1000238540.jpg', '1.3.jpg', '1.4.jpg',
-    '1.5.jpg', '1.6.jpg', '1.7.jpg', '1.jpg',
-    '2.jpg', '30.jpg', '40.jpg', '50.jpg',
+    '55.jpg', 'photo_1.jpeg', '1.3.jpg', '1.4.jpg',
+    '1.5.jpg', '1.6.jpg', 'photo_2.jpeg', 'photo_3.jpeg',
+    'photo_4.jpeg', 'photo_5.jpeg', 'photo_6.jpeg', 'photo_7.jpeg',
   ];
 
   const resourcePersonImages = [
@@ -113,34 +113,33 @@ export default function PhotoGalleryPage() {
 
           {/* Image Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-  {(activeTab === 'gallery' ? photoGalleryImages : resourcePersonImages).map((img, idx) => {
-    const imageSrc = activeTab === 'gallery' ? img : img.src;
-    const name = activeTab === 'gallery' ? '' : img.name;
+            {(activeTab === 'gallery' ? photoGalleryImages : resourcePersonImages).map((img, idx) => {
+              const imageSrc = activeTab === 'gallery' ? img : img.src;
+              const name = activeTab === 'gallery' ? '' : img.name;
 
-    return (
-      <div
-        key={idx}
-        onClick={() => openModal(idx)}
-        className="relative group cursor-pointer overflow-hidden rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform duration-300"
-      >
-        <Image
-          src={`/images/${imageSrc}`}
-          alt={`Image ${idx + 1}`}
-          width={500}
-          height={300}
-          className="object-cover w-full h-52"
-        />
+              return (
+                <div
+                  key={idx}
+                  onClick={() => openModal(idx)}
+                  className="relative group cursor-pointer overflow-hidden rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform duration-300"
+                >
+                  <Image
+                    src={`/images/${imageSrc}`}
+                    alt={`Image ${idx + 1}`}
+                    width={500}
+                    height={300}
+                    className="object-cover w-full h-52"
+                  />
 
-        {activeTab === 'resource' && (
-          <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-sm text-center py-2">
-            {name}
+                  {activeTab === 'resource' && (
+                    <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-sm text-center py-2">
+                      {name}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
-        )}
-      </div>
-    );
-  })}
-</div>
-
         </div>
       </main>
 
